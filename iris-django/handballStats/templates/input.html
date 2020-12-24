@@ -1,0 +1,33 @@
+<style>
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<h2>When you press "start" you empty the DB.(This can be easily changed)</h2>
+<h3>You can write games until you write "stop"</h3>
+<h3>The Consumer Thread is waiting for your input</h3>
+<h3>After you write "stop" you will be redirected to "/api" page with your api options</h3>
+<h3>You can see the JSON for specific team at /api/"team_name"</h3>
+<div class="center">
+<form method="POST">
+    {% csrf_token %}
+    <h4> Write the input here: </h4>
+    <input id="game" type="text" name="game"/>
+    <input class="button" type="submit" value="submit" name="submit"/>
+</form>
+</div>

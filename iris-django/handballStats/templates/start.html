@@ -1,0 +1,35 @@
+<style>
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<html><body>
+    <h1>Handball Statistics made by Nikola Metodiev</h1>
+    <h2>Press "start" to start the Consumer Thread</h2>
+<div class="center">
+
+
+    <form method='POST'>
+        {% csrf_token %}
+        <input id="start_button" class="button" type="submit" value="start" name="Start"/>
+    </form>
+
+</div>
+
+
+</body></html>
